@@ -17,7 +17,7 @@ body{
 }
 
 .header{
-    background-image: url(/img/UNAC.jpg);
+    background-image: url(../img/UNAC.jpg);
     background-size: cover;
     background-position: top;
     min-height: 500px;
