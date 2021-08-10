@@ -244,6 +244,7 @@ h3 .subtitle{
     border-radius: 10px;
     border: 1px solid rgb(206, 206, 206);
     transition: .3s ease-in-out;
+    z-index: 0;
 }
 
 .card:hover{
