@@ -1,0 +1,58 @@
+:root{
+    --dark: #161c2d;
+    --secundary-color: #ff6e65;
+}
+
+body.dark .navbar{
+    background-color: var(--dark);
+}
+
+.dark .links-navbar .links li a{
+    color: white;
+}
+
+.dark .links-navbar .links li a:hover{
+    color: var(--secundary-color);
+}
+
+.dark .container{
+    background-color: var(--dark);
+}
+
+.dark .container-top .title{
+    color: white;
+}
+
+.dark .card{
+    box-shadow: none;
+    border-color: rgb(80, 80, 80);
+}
+
+.dark .letter{
+    color: white;
+}
+
+.dark .title-2{
+    color: white;
+}
+
+.dark .img1, .img2, .img3, .img4, .img5, .img6{
+    border-bottom: none;
+}
+
+.dark .p2{
+    color: rgb(184, 184, 184);
+    line-height: 26px;
+}
+
+.dark .container-subscribe{
+    background-color: #161c2d;
+}
+
+.dark .container-subscribe h4{
+    color: white;
+}
+
+.container-subscribe button{
+    background-color: #4867b0;
+}

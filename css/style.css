@@ -17,24 +17,23 @@ body{
 }
 
 .header{
-    background-image: url(/img/portada.jpeg);
+    background-image: url(/img/UNAC.jpg);
     background-size: cover;
     background-position: top;
-    min-height: 500px
+    min-height: 500px;
+    width: 100%;
 }
 
 .navbar{
-    /*  */width: 100%;
-    height: 70px;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
     transition: all .4s ease-in-out;
-}
-
-body.dark .navbar{
-    background-color: var(--dark);
+    position: fixed;
+    z-index: 9999;
 }
 
 .navbar.active{
@@ -99,20 +98,12 @@ body.dark .logo h1:hover{
     transition: all .4s ease-in-out;
 }
 
-body.dark .links li a{
-    color: var(--white);
-}
-
-body.dark .links-navbar a:hover{
+#courses{
     color: var(--secundary-color);
 }
 
-.links-navbar a:hover{
+.links li a:hover{
     color: var(--secundary-color);
-}
-
-.links li:first-child a{
-    color: var(--secundary-color)
 }
 
 .search{
@@ -156,6 +147,7 @@ body.dark .links-navbar a:hover{
     padding: 1rem;
     font-size: 1.2rem;
     color: var(--principal-color);
+    cursor: pointer;
 }
 
 .hamburguer{
@@ -200,6 +192,11 @@ h3{
     font-size: 16px;
     font-weight: 400;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    transition: .3s ease-in-out;
+}
+
+#as:hover{
+    color: white;
 }
 
 #flecha{
@@ -208,8 +205,6 @@ h3{
     padding: 10px;
     font-size: 14px;
 }
-
-
 
 .container{
     background-color: white;
@@ -233,7 +228,7 @@ h3{
     text-align: center;
     color: black;
     font-size: 40px;
-    padding-top: 50px;
+    padding-top: 80px;
     margin-bottom: 40px;
 }
 
@@ -244,15 +239,20 @@ h3 .subtitle{
 .card{
     width: 30%;
     margin: 15px;
-    margin-bottom: 27px;
+    margin-bottom: 50px;
     padding-bottom: 1px;
     border-radius: 10px;
-    border: 1px solid rgb(160, 157, 157);
+    border: 1px solid rgb(206, 206, 206);
+    transition: .3s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 3px 3px 25px 1px rgb(180, 180, 180);
 }
 
 
 .img1{
-    background-image: url(../img/img1.jpg);
+    background-image: url(../img/html.png);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -264,7 +264,7 @@ h3 .subtitle{
 }
 
 .img2{
-    background-image: url(../img/img2.jpg);
+    background-image: url(../img/CSS.png);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -276,7 +276,7 @@ h3 .subtitle{
 }
 
 .img3{
-    background-image: url(../img/img3.jpg);
+    background-image: url(../img/JAVASCRIPT.jpg);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -288,7 +288,7 @@ h3 .subtitle{
 }
 
 .img4{
-    background-image: url(../img/img4.jpg);
+    background-image: url(../img/phyton.png);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -300,7 +300,7 @@ h3 .subtitle{
 }
 
 .img5{
-    background-image: url(../img/img5.jpg);
+    background-image: url(../img/angular.png);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -312,7 +312,7 @@ h3 .subtitle{
 }
 
 .img6{
-    background-image: url(../img/img6.jpg);
+    background-image: url(../img/react.png);
     background-size: cover;
     background-position: top;
     border-bottom: 1px solid rgb(160, 157, 157);
@@ -383,6 +383,8 @@ h3 .subtitle{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    animation-name: circle;
 }
 
 .letter-bottom{
@@ -397,7 +399,8 @@ h3 .subtitle{
 }
 
 .p2{
-    color: #414553;
+    color: rgb(145, 145, 145);
+    line-height: 26px;
 }
 
 .fa{
@@ -447,8 +450,8 @@ hr{
 }
 
 .pre-footer{
-    background-color: #060E1F;
-    margin-top: 100px;
+    background-color: #060e1f;
+    padding-top: 50px;
 }
 
 .subscribe{
@@ -460,9 +463,9 @@ hr{
 .container-subscribe{
     margin-top: -6rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 66%;
     height: 200px;
     background-color: var(--white);
     box-shadow: 0 20px 62px rgb(4 20 69 / 10%);
@@ -471,26 +474,35 @@ hr{
 
 .container-subscribe .text-subscribe{
   width: 50%;
-  padding-left: 1.5rem;
+  padding: 0 3.5rem;
+
 }
 
 .container-subscribe .text-subscribe h4{
     font-size: 2.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding-bottom: 15px;
+}
+
+.container-subscribe .text-subscribe p{
+    color:rgb(124, 124, 124);
+    letter-spacing: 0.5px;
 }
 
 .input{
-    width: 50%;
+    width: 51%;
     display:flex;
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
 }
 
+
 .container-subscribe input{
     width: 60%;
     height: 50px;
-    margin: 2rem 0 2rem 2rem;
+    margin: 2rem 0 2rem 0;
     border-radius: 5px 0 0  5px;
     border: 1px solid #707070;
     padding-left: 1rem;
@@ -498,14 +510,20 @@ hr{
 }
 
 .container-subscribe button{
-    width: 30%;
-    height: 50px;
+    width: 23%;
+    height: 53px;
     border: none;
     background-color: var(--principal-color);
     color: var(--white);
     font-weight: 500;
     font-size: 1rem;
     border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.container-subscribe button:hover{
+    opacity: 0.9;
 }
 
 .container-pre-footer{
@@ -514,18 +532,21 @@ hr{
     justify-content: space-evenly;
     flex-wrap: wrap;
     color: var(--white);
-    padding: 5rem 2rem;
+    padding: 5rem 10.5rem;
 }
 
 .quick-links{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     color: var(--white);
 }
+
 
 .quick-links a{
     text-decoration: none;
     color: var(--white);
+    padding: 2px 0;
 }
 
 .quick-links,.help,.contact{
@@ -534,33 +555,57 @@ hr{
 }
 
 .quick-links h4,.help h4,.contact h4,.about h4{
-    border-bottom: 1px solid #12192A;
-    margin-bottom: 1rem;
-    padding: 5px;
+    border-bottom: 1.2px solid #16213b;
+    margin-bottom: 0.8rem;
+    margin-right: 1rem;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.contact h4{
+    margin-right: 0.1rem !important; 
+    padding-right: 16rem;
 }
 
 .quick-links i,.help i,.contact i,.about i{
     margin-right: 6px;
+    padding: 10px;
 }
 
 .about{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    border-left: 1px solid #12192A;
-    width: 35%;
+    justify-content: space-between;
+    border-left: 1px solid #16213b;
+    width: 30%;
     font-size: 13px;
-    padding-left: 10px;
+    padding-left: 3rem;
+    margin-left: 2rem;
+    left: 6rem;
+}
+
+.about p{
+    margin-right: 18px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(184, 184, 184);
 }
 
 .icons-about{
     padding: 1rem 0;
 }
 
+.icons-about i:hover{
+    color: #12192A;
+    background-color: white;
+}
+
 .icons-about i{
     background-color: #12192A;
     padding: 10px;
     border-radius: 50%;
+    transition: .2s ease-in-out;
+    cursor: pointer;
 }
 
 .icons-about i:first-child{
@@ -571,16 +616,51 @@ hr{
     padding: 10px 11px;
 }
 
+.help{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .help ul,.contact ul{
     list-style: none;
+    justify-content: space-between;
 }
+
+.help ul li{
+    padding: 2px 0;
+}
+
+.contact ul li{
+    font-size: 14px;
+    padding: 6px 0;
+}
+
+.fas.fa-chevron-right, .fas.fa-phone-alt, .fas.fa-map-marker-alt{
+    color: white;
+}
+
+.fas.fa-phone-alt, .fas.fa-map-marker-alt, .far.fa-envelope{
+    font-size: 18px;
+}
+
+.contact li:nth-child(1){
+    cursor: pointer;
+}
+
+.contact li:nth-child(2){
+    cursor: pointer;
+}
+
 
 .footer{
     background-color: #040A17;
     text-align: center;
     line-height: 50px;
-    color: #707070;
+    color: #a3a3a3;
     height: 50px;
+    padding: 8px 0;
 }
 
 @media screen and (max-width:812px){
