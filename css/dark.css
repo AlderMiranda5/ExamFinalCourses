@@ -3,6 +3,10 @@
     --secundary-color: #ff6e65;
 }
 
+.dark{
+    background-color: var(--dark);
+}
+
 body.dark .navbar{
     background-color: var(--dark);
 }
