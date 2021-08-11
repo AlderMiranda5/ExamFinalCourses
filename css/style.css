@@ -476,7 +476,6 @@ hr{
 .container-subscribe .text-subscribe{
   width: 50%;
   padding: 0 3.5rem;
-
 }
 
 .container-subscribe .text-subscribe h4{
@@ -664,7 +663,9 @@ hr{
     padding: 8px 0;
 }
 
-@media screen and (max-width:812px){
+/* RESPONSIVE */
+
+@media screen and (max-width:900px){
     .container-bottom{
         width: 100%;
     }
@@ -673,11 +674,67 @@ hr{
         width: 100%;
     }
 
+    .container-pre-footer{
+        width: 85%;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .container-pre-footer .linkss{
+        width: 40%;
+        margin: 30px 0;
+    }
+
+    .container-pre-footer .about{
+        border-left: none;
+    }
+
+    .container-pre-footer .contact{
+        margin-left: 30px;
+    }
+
+    
+
+    .footer{
+        font-size: 13px;
+    }
+
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:500px){
+
+    .logo h1{
+        font-size: 18px;
+    }
+
+    .logo img{
+        width: 37px;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .links-navbar{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links li{
+        margin: 10px;
+    }
+
     .headercon{
-        padding-left: 70px
+        padding-left: 70px;
     }
 
     .title{
@@ -691,5 +748,15 @@ hr{
     .art, .design, .porc{
         padding-left: 5px;
     }
+
+    .container-pre-footer .linkss{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer{
+        font-size: 11px;
+    }
 }
+
 
